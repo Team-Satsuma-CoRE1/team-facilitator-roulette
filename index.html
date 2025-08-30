@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Facilitator Roulette</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Team Facilitator Roulette</h1>
+            <p class="subtitle">今日のファシリテータを決めよう！</p>
+        </header>
+
+        <main>
+            <section class="member-selection">
+                <h2>参加メンバーを選択</h2>
+                <div id="memberList" class="member-grid">
+                </div>
+                <p class="selection-count">
+                    選択中: <span id="selectedCount">0</span>名
+                </p>
+            </section>
+
+            <section class="roulette-section">
+                <div id="rouletteContainer" class="roulette-container">
+                    <div class="pointer">▼</div>
+                    <div id="rouletteWheel" class="roulette-wheel">
+                    </div>
+                </div>
+                
+                <button id="startButton" class="start-button" disabled>
+                    ルーレットスタート 🎰
+                </button>
+
+                <div id="resultDisplay" class="result-display hidden">
+                    <h2>本日のファシリテータは...</h2>
+                    <div class="winner">
+                        <span class="winner-avatar"></span>
+                        <span class="winner-name"></span>
+                    </div>
+                    <button id="resetButton" class="reset-button">
+                        もう一度
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="controls">
+                <button id="soundToggle" class="sound-toggle" aria-label="サウンド切り替え">
+                    🔊
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <canvas id="confetti" class="confetti-canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>

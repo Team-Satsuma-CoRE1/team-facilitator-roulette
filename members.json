@@ -1,0 +1,40 @@
+{
+  "team": "開発チーム",
+  "members": [
+    {
+      "id": 1,
+      "name": "yoshimi",
+      "avatar": "🧑‍💻"
+    },
+    {
+      "id": 2,
+      "name": "sssome",
+      "avatar": "👩‍💻"
+    },
+    {
+      "id": 3,
+      "name": "id",
+      "avatar": "👨‍💼"
+    },
+    {
+      "id": 4,
+      "name": "Regen",
+      "avatar": "👩‍💼"
+    },
+    {
+      "id": 5,
+      "name": "kawazap",
+      "avatar": "🧑‍🎨"
+    },
+    {
+      "id": 6,
+      "name": "RK",
+      "avatar": "👩‍🎨"
+    },
+    {
+      "id": 7,
+      "name": "yutabon00",
+      "avatar": "👨‍🔧"
+    }
+  ]
+}
