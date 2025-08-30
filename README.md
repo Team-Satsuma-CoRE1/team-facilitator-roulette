@@ -12,14 +12,16 @@
 
 ## 🚀 デモ
 
-[https://[your-username].github.io/team-facilitator-roulette/](https://[your-username].github.io/team-facilitator-roulette/)
+🌐 **ライブデモ**: [https://team-satsuma-core1.github.io/team-facilitator-roulette](https://team-satsuma-core1.github.io/team-facilitator-roulette)
+
+実際に動作するアプリケーションをお試しください！
 
 ## 📦 セットアップ
 
 ### 1. リポジトリのクローン
 
 ```bash
-git clone https://github.com/[your-username]/team-facilitator-roulette.git
+git clone https://github.com/team-satsuma-core1/team-facilitator-roulette.git
 cd team-facilitator-roulette
 ```
 
@@ -45,6 +47,8 @@ cd team-facilitator-roulette
 1. GitHubリポジトリの Settings > Pages へ移動
 2. Source を "GitHub Actions" に設定
 3. mainブランチにプッシュすると自動デプロイ
+
+**注意**: このリポジトリは既にGitHub Actionsワークフローが設定済みです。`.github/workflows/deploy.yml`を確認してください。
 
 ## 💻 ローカル開発
 
@@ -79,6 +83,7 @@ npx serve .
 - **フロントエンド**: Vanilla JavaScript, HTML5, CSS3
 - **アニメーション**: CSS Transitions, Canvas API
 - **デプロイ**: GitHub Pages, GitHub Actions
+- **CI/CD**: GitHub Actions (自動デプロイ)
 
 ## 📄 ライセンス
 
@@ -91,3 +96,8 @@ MIT License
 ## 📮 お問い合わせ
 
 イシューまたはディスカッションでお気軽にお問い合わせください。
+
+---
+
+**開発チーム**: team-satsuma-core1  
+**プロジェクトURL**: [https://github.com/team-satsuma-core1/team-facilitator-roulette](https://github.com/team-satsuma-core1/team-facilitator-roulette)
