@@ -4,6 +4,21 @@ let isSpinning = false;
 let soundEnabled = true;
 let currentRotation = 0;
 
+// より強力な乱数生成関数（Web Crypto APIを使用）
+function getSecureRandom() {
+    if (window.crypto && window.crypto.getRandomValues) {
+        const array = new Uint32Array(1);
+        window.crypto.getRandomValues(array);
+        return array[0] / (0xFFFFFFFF + 1);
+    }
+    // フォールバック: 複数の乱数ソースを組み合わせる
+    const now = Date.now();
+    const perf = performance.now();
+    const random1 = Math.random();
+    const random2 = Math.random();
+    return ((now * random1 + perf * random2) % 1);
+}
+
 async function loadMembers() {
     try {
         const response = await fetch('members.json');
@@ -116,10 +131,12 @@ function startRoulette() {
         members.find(m => m.id === id)
     );
     
-    const winnerIndex = Math.floor(Math.random() * selectedMembersList.length);
+    // より強力な乱数生成で勝者を決定
+    const winnerIndex = Math.floor(getSecureRandom() * selectedMembersList.length);
     const anglePerMember = 360 / selectedMembersList.length;
     const targetAngle = (360 - winnerIndex * anglePerMember) % 360;
-    const totalRotation = 360 * (3 + Math.random() * 2) + targetAngle;
+    // 回転数もランダムに（3〜5回転）
+    const totalRotation = 360 * (3 + getSecureRandom() * 2) + targetAngle;
     
     let speed = 360;
     const deceleration = 0.95;
